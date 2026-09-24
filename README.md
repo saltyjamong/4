@@ -6,6 +6,220 @@
     <title>전생연분</title>
 </head>
 
+<style>
+/* ========================================
+   전체 페이지
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* 버터색 배경 */
+    background: #FFF3B8;
+
+    color: #4A4333;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* ========================================
+   페이지 내용
+======================================== */
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    padding: 100px 30px;
+}
+
+
+/* ========================================
+   제목
+======================================== */
+
+h1 {
+    text-align: center;
+
+    font-size: 48px;
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   유령
+======================================== */
+
+.ghost {
+    position: fixed;
+
+    z-index: 1;
+
+    font-size: 32px;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    /* 둥둥 떠다니는 애니메이션 */
+    animation:
+        ghostFloat 4s ease-in-out infinite,
+        ghostSway 6s ease-in-out infinite;
+}
+
+
+/* 위아래로 둥둥 */
+
+@keyframes ghostFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* 좌우로 살짝 흔들림 */
+
+@keyframes ghostSway {
+
+    0% {
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: 15px;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+
+/* ========================================
+   유령 위치
+======================================== */
+
+.ghost1 {
+    top: 15%;
+    left: 8%;
+
+    font-size: 35px;
+
+    animation-duration: 4s;
+}
+
+.ghost2 {
+    top: 35%;
+    right: 10%;
+
+    font-size: 28px;
+
+    animation-duration: 5s;
+
+    animation-delay: -2s;
+}
+
+.ghost3 {
+    top: 65%;
+    left: 15%;
+
+    font-size: 24px;
+
+    animation-duration: 6s;
+
+    animation-delay: -1s;
+}
+
+.ghost4 {
+    top: 80%;
+    right: 18%;
+
+    font-size: 38px;
+
+    animation-duration: 5.5s;
+
+    animation-delay: -3s;
+}
+
+
+/* ========================================
+   예시 콘텐츠
+======================================== */
+
+.card {
+    background: rgba(255, 255, 255, 0.55);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    margin-top: 80px;
+
+    box-shadow:
+        0 10px 30px rgba(120, 100, 30, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+
+    color: #62552C;
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ======================================
+     떠다니는 유령
+====================================== -->
+
+<div class="ghost ghost1">👻</div>
+<div class="ghost ghost2">👻</div>
+<div class="ghost ghost3">👻</div>
+<div class="ghost ghost4">👻</div>
+
+
+<!-- ======================================
+
+
+</div>
+
 <!-- 메뉴 -->
 <nav class="menu">
   <a href="#intro">INTRO</a>
